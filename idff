@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>HAMO PARTY - Platby</title>
+</head>
+<body>
+  <h1>Vítej na HAMO PARTY</h1>
+  <p>Vyber si svou pochoutku:</p>
+  <ul>
+    <li><a href="burger.html">🍔 Burger – 65 Kč</a></li>
+  </ul>
+</body>
+</html>
