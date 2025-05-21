@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>🍔 Burger – 65 Kč</title>
+  <script>
+    function odeslatPlatbu() {
+      const prezdivka = document.getElementById("prezdivka").value.trim();
+      if (!prezdivka) {
+        alert("Zadej prosím svou přezdívku.");
+        return;
+      }
+
+      // Zde je fiktivní odkaz na GoPay platbu – v reálu nahradíš svým
+      const baseUrl = "https://gopay.fake/payment?item=Burger&amount=65&note=";
+      const finalUrl = baseUrl + encodeURIComponent("Burger – přezdívka: " + prezdivka);
+
+      window.location.href = finalUrl;
+    }
+  </script>
+</head>
+<body>
+  <h1>🍔 Burger – 65 Kč</h1>
+  <p>Zadej svou přezdívku. Budeme tě podle ní volat při výdeji.</p>
+  <input type="text" id="prezdivka" placeholder="Tvoje přezdívka">
+  <button onclick="odeslatPlatbu()">ZAPLATIT</button>
+  <p><a href="index.html">⬅️ Zpět na výběr</a></p>
+</body>
+</html>
