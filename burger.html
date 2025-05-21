@@ -3,6 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>🍔 Burger – 65 Kč</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #219150;
+    }
+
+    p, a {
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
   <script>
     function odeslatPlatbu() {
       const prezdivka = document.getElementById("prezdivka").value.trim();
@@ -11,17 +69,15 @@
         return;
       }
 
-      // Zde je fiktivní odkaz na GoPay platbu – v reálu nahradíš svým
       const baseUrl = "https://gopay.fake/payment?item=Burger&amount=65&note=";
       const finalUrl = baseUrl + encodeURIComponent("Burger – přezdívka: " + prezdivka);
-
       window.location.href = finalUrl;
     }
   </script>
 </head>
 <body>
   <h1>🍔 Burger – 65 Kč</h1>
-  <p>Zadej svou přezdívku. Budeme tě podle ní volat při výdeji.</p>
+  <p>Zadej svou přezdívku:</p>
   <input type="text" id="prezdivka" placeholder="Tvoje přezdívka">
   <button onclick="odeslatPlatbu()">ZAPLATIT</button>
   <p><a href="index.html">⬅️ Zpět na výběr</a></p>
